@@ -1,0 +1,8 @@
+.form-container{
+    background-image: url("../assets/buildings1.png");
+}
+
+input{
+    background-color: #333;
+    border: 1px solid #aaa;
+}

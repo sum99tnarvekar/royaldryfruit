@@ -1,0 +1,84 @@
+/* Add spacing between slides */
+.slide-container {
+    padding: 0 10px; /* Adjust the gap between the slides */
+}
+
+/* Override slick's slide CSS to prevent overlapping or default spacing */
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    margin: 0; /* Removes default margin */
+}
+
+.slick-track {
+    display: flex;
+    align-items: stretch;
+}
+
+.slick-slide > div {
+    display: flex;
+    height: auto;
+}
+
+/* Customize arrow buttons */
+.slick-prev, .slick-next {
+    background-color: #555; /* Your desired color */
+    width: 30px;            /* Width of the arrow buttons */
+    height: 30px;           /* Height of the arrow buttons */
+    z-index: 2;             /* Ensures the buttons appear on top */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;     /* Absolute positioning */
+    top: 50%;               /* Vertically center the arrows */
+    border-radius: 50%;     /* Makes the arrow buttons circular */
+    transition: opacity 0.3s ease;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+/* Arrow hover effect */
+.slick-prev:hover, .slick-next:hover {
+    background-color: #92c02c; /* Change this to your hover color */
+}
+
+/* Customize the arrow icons */
+.slick-prev::before, .slick-next::before {
+    color: white;           /* Arrow icon color */
+    font-size: 20px;        /* Arrow icon size */
+}
+
+/* Positioning of the arrows */
+.slick-prev {
+    left: 93.5%;
+    top: -15%;
+}
+
+.slick-next {
+    right: 0;
+    top: -15%;
+}
+
+/* Position changes for screens between 768px and 820px */
+@media (min-width: 768px) and (max-width: 820px) {
+    .slick-prev {
+        left: 85%; /* Adjust left position for 768px to 820px devices */
+        top: -11%; /* Adjust top position */
+    }
+
+    .slick-next {
+        right: 5%; /* Adjust right position for 768px to 820px devices */
+        top: -11%; /* Adjust top position */
+    }
+}
+
+@media (max-width: 767px) {
+    .slick-prev {
+        left: 82%; /* Adjust left position for small devices */
+        top: -15%;   /* Adjust top position for better visibility */
+    }
+
+    .slick-next {
+        right: 0%; /* Adjust right position for small devices */
+        top: -15%;    /* Adjust top position for better visibility */
+    }
+}

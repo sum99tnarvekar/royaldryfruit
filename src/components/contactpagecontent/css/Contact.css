@@ -1,0 +1,9 @@
+.custom-recaptcha {
+    height: 49.6px; /* Set the desired height */
+}
+
+/* Optional: Adjusting the appearance to center the reCAPTCHA */
+.g-recaptcha {
+    transform: scale(0.77); /* Adjust scale if necessary */
+    transform-origin: 0 0; /* Adjusts origin to the top left */
+}
